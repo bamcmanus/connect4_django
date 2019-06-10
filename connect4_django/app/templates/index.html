@@ -1,9 +1,11 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %} 
+{% load staticfiles %}
+{% block content %}
 
 <h1 class="text-center">Welcome to Connect 4!</h1>
 
 <br />
-<img src="../static/content/gamepic.jpg" class="indeximg">
+<img src="{% static 'content/gamepic.jpg' %}" class="indeximg">
 <br>
 
 <form class="text-center" action='/newgame/' method="post">{% csrf_token %}
